@@ -1,0 +1,14 @@
+{
+  "version": "1.2.3",
+  "release_date": "2025-10-01",
+  "notes": "Performance improvements, better form handling, and minor bug fixes.",
+  "windows": {
+    "url": "https://cdn.example.com/FastApply-1.2.3-windows-x64-setup.exe",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "macos": {
+    "url": "https://cdn.example.com/FastApply-1.2.3-macos.dmg",
+    "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "all_releases_url": "https://cdn.example.com/releases/"
+}

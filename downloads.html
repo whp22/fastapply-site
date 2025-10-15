@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download FastApply</title>
+  <meta name="description" content="Download FastApply desktop app for Windows and macOS." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header container">
+    <a class="brand" href="/"><img class="logo" src="assets/logo.svg" alt="FastApply logo" /> FastApply</a>
+    <nav class="nav">
+      <a href="index.html#features">Features</a>
+      <a class="active" href="downloads.html">Download</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="downloads container">
+    <h1>Download</h1>
+    <p class="subtitle">Your data stays on your device. Choose your platform below.</p>
+
+    <div id="release" class="release card">
+      <div class="release-head">
+        <div>
+          <h2>FastApply <span id="version">v—</span></h2>
+          <p id="release-notes" class="muted">Fetching latest release…</p>
+        </div>
+        <div class="badge" id="release-date">—</div>
+      </div>
+
+      <div class="grid two">
+        <div class="dl card soft">
+          <h3>Windows</h3>
+          <p>Signed installer (x64)</p>
+          <a id="win-url" class="btn btn-primary" href="#" download>Download .exe</a>
+          <p class="checksum"><small>SHA256: <span id="win-sha">—</span></small></p>
+        </div>
+        <div class="dl card soft">
+          <h3>macOS</h3>
+          <p>Notarized DMG (Apple Silicon/Intel)</p>
+          <a id="mac-url" class="btn btn-primary" href="#" download>Download .dmg</a>
+          <p class="checksum"><small>SHA256: <span id="mac-sha">—</span></small></p>
+        </div>
+      </div>
+      <p class="muted">Having trouble? Try an older version from the <a href="#" id="all-releases">releases page</a>.</p>
+    </div>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="year"></span> FastApply. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

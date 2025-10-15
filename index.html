@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FastApply — Find & Apply to Jobs Faster</title>
+  <meta name="description" content="FastApply is a desktop app that helps you search and apply to jobs faster with a clean, privacy‑first workflow." />
+  <meta property="og:title" content="FastApply" />
+  <meta property="og:description" content="Download FastApply for Windows or macOS and speed up your job applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.png" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header container">
+    <a class="brand" href="/"><img class="logo" src="assets/logo.svg" alt="FastApply logo" /> FastApply</a>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="downloads.html">Download</a>
+      <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Search & Apply to Jobs <span class="accent">Faster</span></h1>
+      <p class="subtitle">A privacy‑first desktop app with human‑like automation, résumé tools, and a clean UI.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="downloads.html">Download for Windows/macOS</a>
+        <a class="btn btn-ghost" href="#features">See features</a>
+      </div>
+      <p class="note">No cloud upload of your résumé. Your data stays <strong>on your device</strong>.</p>
+    </div>
+    <div class="hero-media">
+      <div class="window">
+        <div class="window-bar">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="window-body">
+          <div class="code">
+            <span>&gt; fastapply run</span><br/>
+            Connecting to LinkedIn…<br/>
+            Found 42 matching jobs<br/>
+            Submitting Easy Apply (step 1/3)…<br/>
+            ✓ Applied to 18 jobs today
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features container">
+    <h2>Features</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Human‑like automation</h3>
+        <p>Human pacing, scrolling, and form filling to reduce bot detection.</p>
+      </div>
+      <div class="card">
+        <h3>Smart résumé tools</h3>
+        <p>Summarize job descriptions and tailor your answers and cover letters.</p>
+      </div>
+      <div class="card">
+        <h3>Privacy‑first</h3>
+        <p>Stores your data locally in encrypted form; nothing is uploaded by default.</p>
+      </div>
+      <div class="card">
+        <h3>Configurable</h3>
+        <p>Simple YAML settings for searches, profiles, and limits.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta" class="cta-block">
+    <div class="container cta-inner">
+      <div>
+        <h2>Ready to speed up your job search?</h2>
+        <p>Download the desktop app and start applying in minutes.</p>
+      </div>
+      <a class="btn btn-primary btn-lg" href="downloads.html">Download FastApply</a>
+    </div>
+  </section>
+
+  <section id="faq" class="faq container">
+    <h2>FAQ</h2>
+    <details>
+      <summary>What platforms are supported?</summary>
+      <p>Windows (x64) and macOS (Apple Silicon/Intel). Linux build available on request.</p>
+    </details>
+    <details>
+      <summary>Where is my data stored?</summary>
+      <p>Locally on your device (e.g., Windows: %LOCALAPPDATA%\FastApply). Sensitive fields are encrypted.</p>
+    </details>
+    <details>
+      <summary>Do I need an account?</summary>
+      <p>Yes. Sign in inside the app to enable usage limits and license checks.</p>
+    </details>
+  </section>
+
+  <footer class="footer container">
+    <p>© <span id="year"></span> FastApply. All rights reserved.</p>
+    <div class="links">
+      <a href="privacy.html">Privacy</a>
+      <a href="downloads.html">Downloads</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
