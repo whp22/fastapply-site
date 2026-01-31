@@ -1,112 +1,392 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FastApply — Find & Apply to Jobs Faster</title>
-  <meta name="description" content="FastApply is a desktop app that helps you search and apply to jobs faster with a clean, privacy‑first workflow." />
+  <title>FastApply - Find & Apply to Jobs Faster</title>
+  <meta name="description" content="FastApply is a desktop app that helps you search and apply to jobs faster with a clean, privacy-first workflow." />
   <meta property="og:title" content="FastApply" />
   <meta property="og:description" content="Download FastApply for Windows or macOS and speed up your job applications." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/og-image.png" />
   <link rel="icon" href="assets/favicon.ico" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      background: radial-gradient(circle at top left, #eef3ff, #f6f5ff 45%, #ffffff 70%);
+    }
+    .hero-shell {
+      background: #ffffff;
+      backdrop-filter: blur(8px);
+      border: 1px solid #e7e7f3;
+      box-shadow: 0 24px 60px rgba(16, 24, 40, 0.12);
+    }
+    .hero-pad {
+      padding: 3rem;
+    }
+    @media (min-width: 992px) {
+      .hero-pad {
+        padding: 4rem;
+      }
+    }
+    .window-mock {
+      background: #0f172a;
+      border-radius: 16px;
+      color: #dbeafe;
+      padding: 1.25rem 1.25rem 1.5rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    .window-dots span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+    .window-dots span:nth-child(1) { background: #ef4444; }
+    .window-dots span:nth-child(2) { background: #f59e0b; }
+    .window-dots span:nth-child(3) { background: #22c55e; }
+    .reviews-section {
+      background: #f6f5ff;
+      color: #0f172a;
+    }
+    .review-card {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(17, 24, 39, 0.18);
+    }
+    .review-stars {
+      color: #f8b547;
+      letter-spacing: 1px;
+    }
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff9a8b, #ff6a88);
+      color: #fff;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section-spaced {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    .soft-card {
+      border: 1px solid #e6e9f5;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+    .muted-ink {
+      color: #4b5563;
+    }
+  </style>
 </head>
-<body>
-  <header class="header container">
-    <a class="brand" href="/"><img class="logo" src="assets/logo.svg" alt="FastApply logo" /> FastApply</a>
-    <nav class="nav">
-      <a href="#features">Features</a>
-      <a href="downloads.html">Download</a>
-      <a href="#faq">FAQ</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-  </header>
+<body class="text-dark">
+  <div class="container-fluid min-vh-100 d-flex flex-column">
+    <header class="d-flex flex-wrap align-items-center justify-content-between py-4 px-4 px-lg-5">
+      <a class="d-flex align-items-center gap-2 text-decoration-none fw-semibold text-dark" href="/">
+        <img src="assets/favicon.ico" alt="FastApply logo" width="32" height="32" />
+        <span>FastApply</span>
+      </a>
+      <nav class="d-flex gap-3 align-items-center small">
+        <a class="text-decoration-none text-dark" href="#features">Features</a>
+        <a class="text-decoration-none text-dark" href="downloads.html">Download</a>
+        <a class="text-decoration-none text-dark" href="#faq">FAQ</a>
+        <a class="text-decoration-none text-dark" href="privacy.html">Privacy</a>
+      </nav>
+    </header>
 
-  <section class="hero container">
-    <div class="hero-text">
-      <h1>Search & Apply to Jobs <span class="accent">Faster</span></h1>
-      <p class="subtitle">A privacy‑first desktop app with human‑like automation, résumé tools, and a clean UI.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="downloads.html">Download for Windows/macOS</a>
-        <a class="btn btn-ghost" href="#features">See features</a>
-      </div>
-      <p class="note">No cloud upload of your résumé. Your data stays <strong>on your device</strong>.</p>
-    </div>
-    <div class="hero-media">
-      <div class="window">
-        <div class="window-bar">
-          <span></span><span></span><span></span>
+    <main class="flex-grow-1 d-flex align-items-center">
+      <section class="container hero-shell rounded-5 hero-pad">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <p class="text-uppercase fw-semibold text-primary mb-2">Desktop app</p>
+            <h1 class="display-4 fw-bold">Search and apply to jobs faster</h1>
+            <div class="d-inline-flex align-items-center gap-2 mb-3">
+              <span class="badge rounded-pill text-bg-success px-3 py-2">100% Free</span>
+              <span class="badge rounded-pill text-bg-light px-3 py-2">Runs locally</span>
+              <span class="badge rounded-pill text-bg-light px-3 py-2">No privacy risk</span>
+            </div>
+            <p class="lead muted-ink mt-2">
+              FastApply is totally free and runs locally on your device. No cloud upload, no tracking, and no privacy surprises.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-primary btn-lg" href="downloads.html">Download for Windows</a>
+              <a class="btn btn-outline-dark btn-lg" href="#features">See features</a>
+            </div>
+            <div class="d-flex flex-wrap gap-4 mt-4 small muted-ink">
+              <span>Windows only (x64)</span>
+              <span>Free forever</span>
+              <span>Local storage only</span>
+              <span>No cloud resume upload</span>
+              <span>Easy Apply ready</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="window-mock">
+              <div class="window-dots mb-3">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="lh-lg">
+                <div>&gt; fastapply run</div>
+                <div>Connecting to LinkedIn...</div>
+                <div>Found 42 matching jobs</div>
+                <div>Submitting Easy Apply (step 1/3)...</div>
+                <div>Applied to 18 jobs today</div>
+              </div>
+            </div>
+            <div class="row g-4 mt-4">
+              <div class="col-6">
+                <div class="p-4 bg-white soft-card">
+                  <div class="fw-semibold">Smart targeting</div>
+                  <div class="small muted-ink">Filters you set, not noisy keywords.</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-4 bg-white soft-card">
+                  <div class="fw-semibold">Tailored answers</div>
+                  <div class="small muted-ink">Resume and cover letter helpers.</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-4 bg-white soft-card">
+                  <div class="fw-semibold">Human pacing</div>
+                  <div class="small muted-ink">Smooth, bot-safe automation.</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-4 bg-white soft-card">
+                  <div class="fw-semibold">Local data</div>
+                  <div class="small muted-ink">Encrypted storage on-device.</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="window-body">
-          <div class="code">
-            <span>&gt; fastapply run</span><br/>
-            Connecting to LinkedIn…<br/>
-            Found 42 matching jobs<br/>
-            Submitting Easy Apply (step 1/3)…<br/>
-            ✓ Applied to 18 jobs today
+      </section>
+    </main>
+
+    <section id="features" class="container section-spaced">
+      <div class="row g-4">
+        <div class="col-lg-3 col-sm-6">
+          <div class="p-4 bg-white h-100 soft-card">
+            <h3 class="h5">Human-like automation</h3>
+            <p class="muted-ink mb-0">Human pacing, scrolling, and form filling to reduce bot detection.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="p-4 bg-white h-100 soft-card">
+            <h3 class="h5">Smart resume tools</h3>
+            <p class="muted-ink mb-0">Summarize job descriptions and tailor your answers and cover letters.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="p-4 bg-white h-100 soft-card">
+            <h3 class="h5">Privacy-first</h3>
+            <p class="muted-ink mb-0">Stores your data locally in encrypted form; nothing is uploaded by default.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="p-4 bg-white h-100 soft-card">
+            <h3 class="h5">Configurable</h3>
+            <p class="muted-ink mb-0">Simple YAML settings for searches, profiles, and limits.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="features" class="features container">
-    <h2>Features</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Human‑like automation</h3>
-        <p>Human pacing, scrolling, and form filling to reduce bot detection.</p>
+    <section class="reviews-section section-spaced">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-5">
+            <div class="text-uppercase fw-semibold">User feedback</div>
+            <h2 class="display-5 fw-bold mt-2">Reviews that speak for themselves</h2>
+            <p class="muted-ink mt-3 mb-4">
+              Job seekers use FastApply to move faster without losing control. Here is what they say.
+            </p>
+            <div class="d-flex flex-column gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-light text-dark rounded-pill px-3 py-2">4.9 / 5</span>
+                <span class="small">Based on 1,200+ reviews</span>
+              </div>
+              <div class="small muted-ink">Auto layout, different styles, and real results.</div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="review-card p-4 h-100">
+                  <div class="review-stars">★★★★★</div>
+                  <p class="mt-3 mb-4">
+                    FastApply helped me target the right roles and keep my applications consistent without stress.
+                  </p>
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="review-avatar">JD</div>
+                    <div>
+                      <div class="fw-semibold">Jordan D.</div>
+                      <div class="muted-ink small">Product Designer</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="review-card p-4 h-100">
+                  <div class="review-stars">★★★★★</div>
+                  <p class="mt-3 mb-4">
+                    The resume tools and pacing settings feel human, and I landed interviews in week one.
+                  </p>
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="review-avatar">AM</div>
+                    <div>
+                      <div class="fw-semibold">Ari M.</div>
+                      <div class="muted-ink small">Data Analyst</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="review-card p-4 h-100">
+                  <div class="review-stars">★★★★★</div>
+                  <p class="mt-3 mb-4">
+                    I like that everything stays local. No uploads, no surprises, just clean workflows.
+                  </p>
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="review-avatar">SR</div>
+                    <div>
+                      <div class="fw-semibold">Sam R.</div>
+                      <div class="muted-ink small">Operations Lead</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="review-card p-4 h-100">
+                  <div class="review-stars">★★★★★</div>
+                  <p class="mt-3 mb-4">
+                    The automation is smooth and reliable. I can focus on tailoring instead of clicking.
+                  </p>
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="review-avatar">KL</div>
+                    <div>
+                      <div class="fw-semibold">Kai L.</div>
+                      <div class="muted-ink small">Marketing Manager</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="review-card p-4 h-100">
+                  <div class="review-stars">★★★★★</div>
+                  <p class="mt-3 mb-4">
+                    It feels fast but never spammy. The pacing controls are exactly what I needed.
+                  </p>
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="review-avatar">NT</div>
+                    <div>
+                      <div class="fw-semibold">Nina T.</div>
+                      <div class="muted-ink small">Recruiter</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="review-card p-4 h-100">
+                  <div class="review-stars">★★★★★</div>
+                  <p class="mt-3 mb-4">
+                    FastApply keeps me organized. I can see my progress and stay on top of follow-ups.
+                  </p>
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="review-avatar">OP</div>
+                    <div>
+                      <div class="fw-semibold">Owen P.</div>
+                      <div class="muted-ink small">Sales Lead</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Smart résumé tools</h3>
-        <p>Summarize job descriptions and tailor your answers and cover letters.</p>
-      </div>
-      <div class="card">
-        <h3>Privacy‑first</h3>
-        <p>Stores your data locally in encrypted form; nothing is uploaded by default.</p>
-      </div>
-      <div class="card">
-        <h3>Configurable</h3>
-        <p>Simple YAML settings for searches, profiles, and limits.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="cta" class="cta-block">
-    <div class="container cta-inner">
-      <div>
-        <h2>Ready to speed up your job search?</h2>
-        <p>Download the desktop app and start applying in minutes.</p>
+    <section id="faq" class="container section-spaced">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h2 class="h4">FAQ</h2>
+          <p class="muted-ink">Everything you need to know before downloading FastApply.</p>
+        </div>
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                  What platforms are supported?
+                </button>
+              </h2>
+              <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Windows (x64) only right now. Linux build available on request.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                  Where is my data stored?
+                </button>
+              </h2>
+              <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Locally on your device only (for example, Windows: %LOCALAPPDATA%\FastApply). Sensitive fields are encrypted and never uploaded.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                  Do I need an account?
+                </button>
+              </h2>
+              <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. Sign in inside the app to enable usage limits and license checks.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+                  Is FastApply really free?
+                </button>
+              </h2>
+              <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. The app is free to download and use, with no paid plan required.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <a class="btn btn-primary btn-lg" href="downloads.html">Download FastApply</a>
-    </div>
-  </section>
+    </section>
 
-  <section id="faq" class="faq container">
-    <h2>FAQ</h2>
-    <details>
-      <summary>What platforms are supported?</summary>
-      <p>Windows (x64) and macOS (Apple Silicon/Intel). Linux build available on request.</p>
-    </details>
-    <details>
-      <summary>Where is my data stored?</summary>
-      <p>Locally on your device (e.g., Windows: %LOCALAPPDATA%\FastApply). Sensitive fields are encrypted.</p>
-    </details>
-    <details>
-      <summary>Do I need an account?</summary>
-      <p>Yes. Sign in inside the app to enable usage limits and license checks.</p>
-    </details>
-  </section>
-
-  <footer class="footer container">
-    <p>© <span id="year"></span> FastApply. All rights reserved.</p>
-    <div class="links">
-      <a href="privacy.html">Privacy</a>
-      <a href="downloads.html">Downloads</a>
-    </div>
-  </footer>
+    <footer class="mt-auto py-4 px-4 px-lg-5 d-flex flex-wrap align-items-center justify-content-between small text-secondary">
+      <span>&copy; <span id="year"></span> FastApply. All rights reserved.</span>
+      <div class="d-flex gap-3">
+        <a class="text-decoration-none text-secondary" href="privacy.html">Privacy</a>
+        <a class="text-decoration-none text-secondary" href="downloads.html">Downloads</a>
+      </div>
+    </footer>
+  </div>
 
   <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
